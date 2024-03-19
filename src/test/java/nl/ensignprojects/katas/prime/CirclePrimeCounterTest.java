@@ -30,4 +30,10 @@ public class CirclePrimeCounterTest {
     void testCounterFor1() {
         assertThat(counter.count(1)).isEqualTo(0);
     }
+
+    @Test
+    @DisplayName("There are 4 circular primes below 10.")
+    void testCounterFor10() {
+        assertThat(counter.count(10)).isEqualTo(4);
+    }
 }
