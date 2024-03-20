@@ -38,4 +38,10 @@ public class CirclePrimeCounterTest {
     void testCounterFor100() {
         assertThat(counter.count(100)).isEqualTo(13);
     }
+
+    @Test
+    @DisplayName("There are 25 circular primes below 1000.")
+    void testCounterFor1000() {
+        assertThat(counter.count(1000)).isEqualTo(25);
+    }
 }
