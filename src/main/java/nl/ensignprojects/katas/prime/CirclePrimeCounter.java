@@ -12,7 +12,7 @@ public class CirclePrimeCounter {
         var circlePrimes = new ArrayList<Integer>();
 
         for (int i = 0; i < number; i++) {
-            if (primes.contains(i) && primes.contains(getReverse(i))) {
+            if (primes.contains(i) && primes.contains(reverseNumber(i))) {
                 circlePrimes.add(i);
             }
         }
@@ -20,7 +20,7 @@ public class CirclePrimeCounter {
         return circlePrimes.size();
     }
 
-    private int getReverse(Integer number) {
+    private int reverseNumber(Integer number) {
         StringBuilder builder = new StringBuilder(String.valueOf(number));
         String reverseIntString = builder.reverse().toString();
         return Integer.parseInt(reverseIntString);
